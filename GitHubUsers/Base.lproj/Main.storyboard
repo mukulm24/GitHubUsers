@@ -94,15 +94,18 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NKr-ev-QtK">
-                                        <rect key="frame" x="375" y="17" width="20" height="20"/>
+                                        <rect key="frame" x="335" y="20" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="4gX-bM-JnU"/>
+                                        </constraints>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NKr-ev-QtK" secondAttribute="trailing" constant="20" id="0GD-j7-c5u"/>
+                                    <constraint firstItem="NKr-ev-QtK" firstAttribute="top" secondItem="ND7-HU-O31" secondAttribute="top" constant="20" id="Eib-Pw-1Mz"/>
                                     <constraint firstItem="Cql-3J-SCW" firstAttribute="leading" secondItem="ND7-HU-O31" secondAttribute="leading" constant="15" id="LAR-ds-dAR"/>
                                     <constraint firstItem="Cql-3J-SCW" firstAttribute="centerX" secondItem="ND7-HU-O31" secondAttribute="centerX" id="LQ8-iY-FeV"/>
-                                    <constraint firstItem="NKr-ev-QtK" firstAttribute="top" secondItem="ND7-HU-O31" secondAttribute="top" constant="17" id="Tgk-5i-hkA"/>
-                                    <constraint firstItem="NKr-ev-QtK" firstAttribute="leading" secondItem="Cql-3J-SCW" secondAttribute="trailing" constant="15" id="Xhi-OD-6pf"/>
                                     <constraint firstItem="Cql-3J-SCW" firstAttribute="top" secondItem="ND7-HU-O31" secondAttribute="top" constant="14" id="gGC-vX-2gt"/>
                                     <constraint firstItem="Cql-3J-SCW" firstAttribute="centerY" secondItem="ND7-HU-O31" secondAttribute="centerY" id="iXX-98-edG"/>
                                 </constraints>

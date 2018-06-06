@@ -48,15 +48,22 @@ class UserSearchViewModel {
         
         searchService.searchUsers(query) {
             [unowned self] result in
+            
             self.searchInProgress.value = false
+           
             switch result {
+           
             case .success(let users):
+               
                 self.searchResults.removeAll()
                 if let usersList = users {
                     self.searchResults.insert(contentsOf: usersList, at: 0)
                 }
+                
             case .error:
+                
                 self.errorMessages.next("ERROR")
+            
             }
         }
         
