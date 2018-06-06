@@ -52,7 +52,9 @@ class UserSearchViewModel {
             switch result {
             case .success(let users):
                 self.searchResults.removeAll()
-                self.searchResults.insert(contentsOf: users!, at: 0)
+                if let usersList = users {
+                    self.searchResults.insert(contentsOf: usersList, at: 0)
+                }
             case .error:
                 self.errorMessages.next("ERROR")
             }
