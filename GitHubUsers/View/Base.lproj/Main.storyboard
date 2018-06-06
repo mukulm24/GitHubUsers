@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-Ul-rxs">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-Ul-rxs">
                                 <rect key="frame" x="0.0" y="132" width="375" height="536"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -36,10 +36,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTE-bW-qDk">
-                                                    <rect key="frame" x="3" y="7" width="368" height="57"/>
+                                                    <rect key="frame" x="3" y="7" width="368" height="62"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fh-H4-IvJ">
-                                                            <rect key="frame" x="8" y="7" width="352" height="26"/>
+                                                            <rect key="frame" x="8" y="5" width="352" height="26"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="26" id="UvN-Yw-hbK"/>
                                                             </constraints>
@@ -48,18 +48,28 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ei-ti-LrE">
-                                                            <rect key="frame" x="8" y="34" width="352" height="19"/>
+                                                            <rect key="frame" x="48" y="32" width="312" height="21"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQW-h8-A2S">
+                                                            <rect key="frame" x="8" y="32" width="37" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="1fh-H4-IvJ" firstAttribute="leading" secondItem="7Ei-ti-LrE" secondAttribute="leading" id="2jl-5a-W7R"/>
+                                                        <constraint firstItem="1fh-H4-IvJ" firstAttribute="leading" secondItem="7Ei-ti-LrE" secondAttribute="leading" constant="-40" id="2jl-5a-W7R"/>
+                                                        <constraint firstItem="7Ei-ti-LrE" firstAttribute="leading" secondItem="gQW-h8-A2S" secondAttribute="trailing" constant="3" id="9Zn-YH-jpQ"/>
                                                         <constraint firstAttribute="trailing" secondItem="1fh-H4-IvJ" secondAttribute="trailing" constant="8" id="G8a-Uu-fmV"/>
-                                                        <constraint firstAttribute="bottom" secondItem="7Ei-ti-LrE" secondAttribute="bottom" constant="4" id="hhd-9W-ZVe"/>
-                                                        <constraint firstItem="1fh-H4-IvJ" firstAttribute="top" secondItem="LTE-bW-qDk" secondAttribute="top" constant="7" id="iDc-ve-xNx"/>
+                                                        <constraint firstItem="gQW-h8-A2S" firstAttribute="leading" secondItem="1fh-H4-IvJ" secondAttribute="leading" id="KqP-cE-V3I"/>
+                                                        <constraint firstAttribute="bottom" secondItem="gQW-h8-A2S" secondAttribute="bottom" constant="9" id="b4z-ET-A30"/>
+                                                        <constraint firstItem="gQW-h8-A2S" firstAttribute="top" secondItem="1fh-H4-IvJ" secondAttribute="bottom" constant="1" id="gfk-fp-IJJ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7Ei-ti-LrE" secondAttribute="bottom" constant="9" id="hhd-9W-ZVe"/>
+                                                        <constraint firstItem="1fh-H4-IvJ" firstAttribute="top" secondItem="LTE-bW-qDk" secondAttribute="top" constant="5" id="iDc-ve-xNx"/>
                                                         <constraint firstItem="7Ei-ti-LrE" firstAttribute="top" secondItem="1fh-H4-IvJ" secondAttribute="bottom" constant="1" id="mYO-eU-9e3"/>
                                                         <constraint firstItem="1fh-H4-IvJ" firstAttribute="leading" secondItem="LTE-bW-qDk" secondAttribute="leadingMargin" id="mdk-tz-SUM"/>
                                                         <constraint firstItem="1fh-H4-IvJ" firstAttribute="trailing" secondItem="7Ei-ti-LrE" secondAttribute="trailing" id="pxL-6X-BMd"/>
@@ -70,7 +80,7 @@
                                             <constraints>
                                                 <constraint firstItem="LTE-bW-qDk" firstAttribute="centerX" secondItem="33C-Lv-N2c" secondAttribute="centerX" id="0mm-xX-Sro"/>
                                                 <constraint firstItem="LTE-bW-qDk" firstAttribute="leading" secondItem="33C-Lv-N2c" secondAttribute="leadingMargin" constant="-12" id="4hg-KV-e2M"/>
-                                                <constraint firstItem="LTE-bW-qDk" firstAttribute="centerY" secondItem="33C-Lv-N2c" secondAttribute="centerY" constant="-2" id="Duy-LJ-Qfj"/>
+                                                <constraint firstItem="LTE-bW-qDk" firstAttribute="centerY" secondItem="33C-Lv-N2c" secondAttribute="centerY" constant="0.5" id="Duy-LJ-Qfj"/>
                                                 <constraint firstItem="LTE-bW-qDk" firstAttribute="top" secondItem="33C-Lv-N2c" secondAttribute="topMargin" constant="-4" id="Hd2-Aj-7lg"/>
                                             </constraints>
                                         </tableViewCellContentView>

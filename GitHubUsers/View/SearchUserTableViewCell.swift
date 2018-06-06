@@ -9,7 +9,7 @@
 import UIKit
 
 /**
- Custom table view cell used to show the user's full name and their followers count
+ Custom table view cell used to show the user's login Id and their score
  */
 class SearchUserTableViewCell: UITableViewCell {
     

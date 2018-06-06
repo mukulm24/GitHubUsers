@@ -84,7 +84,6 @@
 				0B027EF420C8261000CFED77 /* Model */,
 				0B027EF120C8251F00CFED77 /* View */,
 				0B027EDF20C8206700CFED77 /* AppDelegate.swift */,
-				0B027EE320C8206700CFED77 /* Main.storyboard */,
 				0B027EE620C8206700CFED77 /* Assets.xcassets */,
 				0B027EE820C8206700CFED77 /* LaunchScreen.storyboard */,
 				0B027EEB20C8206700CFED77 /* Info.plist */,
@@ -95,6 +94,7 @@
 		0B027EF120C8251F00CFED77 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B027EE320C8206700CFED77 /* Main.storyboard */,
 				0B027EF220C8253500CFED77 /* SearchUserTableViewCell.swift */,
 				0B027EFD20C827C400CFED77 /* SearchUserViewController.swift */,
 			);
