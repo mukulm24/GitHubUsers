@@ -29,7 +29,7 @@ class UserSearch {
             switch response.result {
                 
             case .success(let responseObject) :
-                 Logger.log(message: responseObject, event: .info)
+                 Logger.log(message: "\(responseObject)", event: .info)
                  DispatchQueue.main.async {
                     // parse the results, then filter based on date
                     let responseDict =  responseObject as! NSDictionary
@@ -39,12 +39,13 @@ class UserSearch {
                 }
                 
             case .failure(let error) :
-                if let data = response.data, let responseString = String(data: data, encoding: String.Encoding.utf8) {
-                }
-                
+                    Logger.log(message: "\(error)", event: .error)
+                    callback(Result.error(SearchError.requestError))
             }
         })
     }
+    
+    
     
     private func parseUsersSearchResult(searchResult: NSDictionary) -> [User]? {
         
@@ -66,5 +67,7 @@ class UserSearch {
 
         
     }
+
+    
     
 }

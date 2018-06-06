@@ -62,7 +62,7 @@ class SearchUserViewController: UIViewController {
     
     func showErrorAlert(error: String) {
         
-        let alertController = UIAlertController(title: "Error Occured. Please try again.", message: error, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         self.present(alertController, animated: true, completion: nil)
         let actionOk = UIAlertAction(title: "OK", style: .default,
                                      handler: { action in alertController.dismiss(animated: true, completion: nil) })
