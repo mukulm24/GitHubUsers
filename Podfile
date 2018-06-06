@@ -6,8 +6,11 @@ target 'GitHubUsers' do
   use_frameworks!
 
   # Pods for GitHubUsers
-
-  # Used for handling network calls
+  
+  #Used for handling api calls
   pod 'Alamofire'
+  
+  #Used for Reactive Programming and Binding
+  pod 'Bond'
 
 end
