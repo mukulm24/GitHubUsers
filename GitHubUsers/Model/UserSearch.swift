@@ -26,20 +26,16 @@ class UserSearch {
         
         Alamofire.request(requestUrl, method: .get,parameters: data ,encoding: URLEncoding.default).responseJSON(completionHandler: { response in
             
-            
             switch response.result {
                 
             case .success(let responseObject) :
-                 print(responseObject)
+                 Logger.log(message: responseObject, event: .info)
                  DispatchQueue.main.async {
-                    do {
-                        // parse the results, then filter based on date
-                        let responseDict =  responseObject as! NSDictionary
-                        let result = self.parseUsersSearchResult(searchResult: responseDict)
-                        callback(Result.success(result))
-                    } catch {
-                        callback(Result.error(SearchError.parseError))
-                    }
+                    // parse the results, then filter based on date
+                    let responseDict =  responseObject as! NSDictionary
+                    let result = self.parseUsersSearchResult(searchResult: responseDict)
+                    callback(Result.success(result))
+                   
                 }
                 
             case .failure(let error) :
